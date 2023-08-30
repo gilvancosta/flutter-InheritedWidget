@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return UserModel(
       name: 'Zoe Saldana',
+      email: 'user2023@gmail.com',
       imgAvatar: 'https://i.pravatar.cc/300',
       birthday: '01/01/2023',
       child: MaterialApp(

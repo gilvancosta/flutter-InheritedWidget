@@ -1,3 +1,4 @@
+import 'package:exemplo_inheritedwidget/src/models/user_model.dart';
 import 'package:flutter/material.dart';
 
 class DrawerV1Widget extends StatelessWidget {
@@ -5,15 +6,17 @@ class DrawerV1Widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var user = UserModel.of(context);
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          const UserAccountsDrawerHeader(
-            accountEmail: Text("user2023@gmail.com"),
-            accountName: Text("GitHub"),
+          UserAccountsDrawerHeader(
+            accountEmail: Text(user.email),
+            accountName: Text(user.name),
             currentAccountPicture: CircleAvatar(
-              child: Text("CS"),
+              child: Image.network(user.imgAvatar),
+              
             ),
           ),
           // -- widget_page --
