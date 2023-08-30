@@ -15,7 +15,7 @@ sealed class MyAppTheme {
   );
 
   static ThemeData themeData = ThemeData(
-    useMaterial3: true,
+    useMaterial3: false,
     // colorScheme: ColorScheme.fromSwatch().copyWith(primary: ConstantsColors.primaryColor, secondary: ConstantsColors.secondaryColor),
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
 

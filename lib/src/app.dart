@@ -2,11 +2,10 @@
 import 'package:flutter/material.dart';
 
 import 'core/ui/theme/app_theme.dart';
-import 'core/utls/app_routes.dart';
+
 import 'models/user_model.dart';
 import 'pages/home/home_page.dart';
-
-
+import 'pages/splash/splash00_page.dart';
 
 class MyApp extends StatefulWidget {
   final String title;
@@ -26,16 +25,16 @@ class _MyAppState extends State<MyApp> {
       name: 'Zoe Saldana',
       imgAvatar: 'https://i.pravatar.cc/300',
       birthday: '01/01/2023',
-
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Vamos Cozinhar?',
         theme: MyAppTheme.themeData,
-        initialRoute: AppRoutes.home,
+        initialRoute: '/',
         routes: {
-          AppRoutes.home: (ctx) => HomePageApp(title: widget.title),
+          '/': (context) => const Splash00Page(),
+          '/home': (ctx) => HomePageApp(title: widget.title),
         },
-    
+
         onGenerateRoute: (settings) {
           if (settings.name == '/alguma-coisa') {
             return null;

@@ -10,8 +10,8 @@ class DrawerV1Widget extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           const UserAccountsDrawerHeader(
-            accountEmail: Text("gilvancosta2049@csthost.com.br"),
-            accountName: Text("CSTHost"),
+            accountEmail: Text("user2023@gmail.com"),
+            accountName: Text("GitHub"),
             currentAccountPicture: CircleAvatar(
               child: Text("CS"),
             ),
